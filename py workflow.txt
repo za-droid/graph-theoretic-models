@@ -1,0 +1,66 @@
+setting up a python prject workflow (shell commands)
+
+To set up a Python project workflow, you can follow these steps:
+
+Create a new directory for your project.
+
+Initialize a Git repository in your project directory. You can do this by running the following command:
+
+Copy code
+git init
+Create a virtual environment for your project. This will allow you to isolate the dependencies for your project from the global Python environment. You can create a virtual environment using the venv module. Run the following command to create a new virtual environment in your project directory:
+Copy code
+python -m venv env
+Activate the virtual environment. This will allow you to install packages and run Python scripts within the environment. Run the following command to activate the virtual environment:
+Copy code
+source env/bin/activate
+Install the packages that your project depends on. You can use the pip package manager to install packages from PyPI (the Python Package Index). For example, to install the requests package, you can run the following command:
+Copy code
+pip install requests
+Create a file for your main Python script. You can name this file main.py or something similar.
+
+Run your script by using the python command followed by the name of the script file. For example:
+
+Copy code
+python main.py
+When you are finished working on your project, deactivate the virtual environment by running the following command:
+Copy code
+deactivate
+These are the basic steps for setting up a Python project workflow. You may want to also consider using version control software like Git to track changes to your code, and using a tool like pipenv to manage your project's dependencies.
+
+
+
+
+Zain
+add cookiecutter nd makefiles to above workflow
+Cookiecutter is a command-line utility that creates projects from templates. It is a useful tool for setting up the basic structure of a new project quickly. Here is how you can incorporate Cookiecutter into your Python project workflow:
+
+Install the cookiecutter package using pip. Run the following command to install Cookiecutter:
+Copy code
+pip install cookiecutter
+Choose a template for your project. There are many templates available on the Cookiecutter GitHub page (https://github.com/cookiecutter/cookiecutter#available-cookiecutters). You can also create your own template if you want to use a custom project structure.
+
+Run the cookiecutter command and specify the path to the template you want to use. For example:
+
+Copy code
+cookiecutter https://github.com/cookiecutter/python-library-template
+Answer the prompts to customize the template for your project. Cookiecutter will create a new directory for your project and generate the necessary files and directories based on the template you selected.
+Makefiles are used to automate tasks in a project. You can use a Makefile to specify commands that can be run with a single command. Here is how you can incorporate a Makefile into your Python project workflow:
+
+Create a file named Makefile in the root directory of your project.
+
+Define targets and dependencies in the Makefile. A target is a specific task that you want to run, and a dependency is a file or task that must be completed before the target can be run. For example, you might create a target named clean that removes unnecessary files from your project directory, and a target named test that runs your test suite.
+
+Run the Makefile using the make command followed by the name of the target you want to run. For example:
+
+Copy code
+make clean
+You can also specify command-line arguments for your targets by using the ARGS variable. For example:
+Copy code
+test:
+    python -m pytest $(ARGS)
+You can then run the test target with arguments by using the following command:
+
+Copy code
+make test ARGS="-k test_function"
+These are the basic steps for incorporating Cookiecutter and Makefiles into your Python project workflow. You can find more information about how to use these tools in the documentation for Cookiecutter and Make.

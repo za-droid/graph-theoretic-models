@@ -30,8 +30,6 @@ These are the basic steps for setting up a Python project workflow. You may want
 
 
 
-
-Zain
 add cookiecutter nd makefiles to above workflow
 Cookiecutter is a command-line utility that creates projects from templates. It is a useful tool for setting up the basic structure of a new project quickly. Here is how you can incorporate Cookiecutter into your Python project workflow:
 
